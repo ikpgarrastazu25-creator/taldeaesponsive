@@ -43,3 +43,50 @@ h1 {
     margin-bottom: 10px;
     font-weight: bold;
 }
+/* Responsive jartzen */
+@media (min-width: 480px) {
+    .member {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 768px) {
+    .member {
+        width: calc(25% - 20px);
+    }
+}
+
+@media (hover: none) and (orientation: portrait) {
+    .member {
+        padding: 30px;
+        border-color: #aaa;
+    }
+    h1 {
+        font-size: 3em;
+    }
+}
+
+@media (hover: hover) and (min-width: 768px) {
+    .member {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        border-color: #333;
+    }
+}
+
+@media (prefers-color-scheme: dark) and (orientation: landscape) {
+    body {
+        background-color: #e12a2a;
+        color: white;
+    }
+    .member {
+        background-color: #333;
+        border-color: #555;
+    }
+    .member p {
+        color: #ccc;
+    }
+}
